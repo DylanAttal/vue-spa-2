@@ -7,7 +7,8 @@ module.exports = {
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
   rules: {
-    semi: 0
+    semi: 0,
+    quotes: 0
   },
   // required to lint *.vue files
   plugins: ['html']
