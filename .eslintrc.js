@@ -8,7 +8,8 @@ module.exports = {
   extends: 'standard',
   rules: {
     semi: 0,
-    quotes: 0
+    quotes: 0,
+    'space-before-function-paren': 0
   },
   // required to lint *.vue files
   plugins: ['html']

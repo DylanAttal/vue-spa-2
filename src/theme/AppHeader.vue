@@ -1,9 +1,16 @@
 <template>
   <nav class="nav has-shadow">
     <div class="container">
-      <a href="/">
+      <router-link to="/category/front-end" exact>
         <img src="http://bit.ly/vue-img" alt="Vue SPA">
-      </a>
+      </router-link>
+      <router-link to="/category/front-end" class="nav-item is-tab" exact>Front-end</router-link>
+      <router-link
+        :to="{ name: 'category', params: { id: 'mobile' } }"
+        class="nav-item is-tab"
+        exact
+      >Mobile</router-link>
+      <router-link to="/login" class="nav-item is-tab">Login</router-link>
     </div>
   </nav>
 </template>
