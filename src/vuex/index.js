@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { stat } from 'fs'
 
 Vue.use(Vuex)
 
@@ -12,6 +13,20 @@ const store = new Vuex.Store({
   getters: {
     isAuthenticated: state => {
       return state.isAuthenticated
+    }
+  },
+  actions: {
+    logout(context) {
+      context.commit('logout')
+    }
+  },
+  mutations: {
+    logout(state) {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('token', null)
+        window.localStorage.setItem('tokenExpiration', null)
+      }
+      state.isAuthenticated = false
     }
   }
 })
